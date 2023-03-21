@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from feed.views import HomeView, PostView, DetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomeView.as_view(template_name="home.html"), name="feed"),
+    path('post', PostView.as_view(template_name="post.html"), name="post"),
+    path('detail/<str:id>', DetailView.as_view(template_name="detail.html"), name="detail"),
 ]
