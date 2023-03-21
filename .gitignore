@@ -1,0 +1,4 @@
+# exclude everything
+imageshare/db.sqlite3
+
+# !exception to the rule
