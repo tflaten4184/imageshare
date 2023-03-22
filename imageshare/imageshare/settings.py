@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'feed',
+    'easy_thumbnails',
 ]
 
 
@@ -102,6 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'postThumbnail': {'size': (200, 200), 'crop': True},
+    },
+}
 
 
 # Internationalization
