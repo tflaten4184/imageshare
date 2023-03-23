@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 
+{% block title %}Image Sharer - Home{% endblock title %}
+
 {% block content %}
-    <h2>Home</h2>
-    <hr>
 
     {% load static %}
-
-    <a href="{% url "feed:post" %}">upload new post</a> <br><hr>
 
     {% for post in posts %}
         {% load thumbnail %}

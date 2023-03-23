@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}New Post{% endblock title %}
+
 {% block content %}
-    <h2>This is post (upload)</h2>
+    <h2>Upload a new image!</h2>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}

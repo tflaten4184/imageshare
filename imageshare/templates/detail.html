@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Detail</h2>
-    <a href="{% url "feed:home" %}">back to home</a> <br><hr>
+    <h2>Details for Post</h2>
     <img src="{{ post.image.url }}" alt="">
      <br>
     {{post}}
