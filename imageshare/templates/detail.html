@@ -2,7 +2,7 @@
 
 {% block content %}
     <h2>Detail</h2>
-    <a href="{% url "feed" %}">back to home</a> <br><hr>
+    <a href="{% url "feed:home" %}">back to home</a> <br><hr>
     <img src="{{ post.image.url }}" alt="">
      <br>
     {{post}}
