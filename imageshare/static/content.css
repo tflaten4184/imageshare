@@ -1,0 +1,20 @@
+/* body {
+    background-color: rgb(2, 2, 49);
+} */
+
+/* 
+.btn-primary {
+    color: rgb(70, 70, 70);
+    background-color: rgb(65, 194, 233);
+}
+ */
+.navbar navbar-expand-lg {
+    color: antiquewhite;
+    background-color: rgb(17, 17, 168);
+}
+
+.card, img {
+    border-color: rgb(16, 68, 165);
+    border-width: 2px;
+    border-radius: 10px;
+}

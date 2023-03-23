@@ -6,12 +6,17 @@
 
     {% load static %}
 
-    {% for post in posts %}
-        {% load thumbnail %}
-        <img src="{{ post.image|thumbnail_url:'postThumbnail'}}" alt=""> <br>
-        {{ post.text }} <br>
-        <a href="{% url "feed:detail" post.id %}">view details</a>
-        <hr>
-    {% endfor %}
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-3">
+            <div class="card my-4 p-2">
+                {% load thumbnail %}
+                <img src="{{ post.image|thumbnail_url:'postThumbnail'}}" alt=""> <br>
+                {{ post.text }} <br>
+                <a href="{% url "feed:detail" post.id %}" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock content %}
