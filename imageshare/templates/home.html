@@ -6,11 +6,13 @@
 
     {% load static %}
 
+    <a href="{% url "post" %}">upload new post</a> <br><hr>
+
     {% for post in posts %}
         {% load thumbnail %}
         <img src="{{ post.image|thumbnail_url:'postThumbnail'}}" alt=""> <br>
-        {% comment %} <img src="{{post.image.url}}" alt=""> <br> {% endcomment %}
         {{ post.text }} <br>
+        <a href="{% url "detail" post.id %}">view details</a>
         <hr>
     {% endfor %}
 
