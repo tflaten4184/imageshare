@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView, DetailView
 
@@ -13,7 +14,6 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all().order_by('-id')
         return context
-
 class PostView(FormView):
     template_name = "post.html"
     form_class = PostForm
@@ -25,6 +25,7 @@ class PostView(FormView):
             text=form.cleaned_data['text'],
             image=form.cleaned_data['image']
         )
+        messages.add_message(self.request, messages.SUCCESS, "image post successful")
         return super().form_valid(form)
 
 
